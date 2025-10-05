@@ -9,7 +9,7 @@ def validar_nombre(nombre):
 def validar_telefono(telefono):
     return telefono.isdigit() and len(telefono) == 10
 
-# METODO DE AGREGAR CONTACTO CON VALIDACIONES DE NOMBRE Y TELEFONO
+# Funcion para agregar contacto , nombre y telefono
 def agregar_contacto(nombre, telefono):
     if not validar_nombre(nombre):
         raise ValueError("El nombre solo debe contener letras y espacios.")
@@ -18,11 +18,11 @@ def agregar_contacto(nombre, telefono):
     contactos[nombre] = telefono
     return True
 
-# METODO DE BUSCAR CONTACTO POR NOMBRE
+# Funcion buscar contacto por nombre
 def buscar_contacto(nombre):
     return contactos.get(nombre, None)
 
-# METODO DE ELIMINAR CONTACTO POR NOMBRE
+# Funcion eliminar contacto por nombre
 def eliminar_contacto(nombre):
     if nombre in contactos:
         del contactos[nombre]
