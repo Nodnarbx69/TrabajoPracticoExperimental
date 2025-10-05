@@ -30,6 +30,7 @@ jobs:
 
       - name: Ejecutar pruebas con coverage
         run: |
+          pip install pytest-cov
           pytest --cov=src --cov-report=html
 
       - name: Subir reporte de coverage como artifact
