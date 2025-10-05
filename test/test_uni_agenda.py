@@ -31,14 +31,13 @@ def test_eliminar_contacto():
     agregar_contacto("Ana Lopez","0987654321")
     agregar_contacto("Ana Calderon","0987654322")
     agregar_contacto("Ana Maldonado","0987654323")
-    print("\nLISTADO COMPLETO")
-    for nombre, telefono in contactos.items():
-        print(f" {nombre}: {telefono}")
-
+   ##  print("\nLISTADO COMPLETO")
+    #for nombre, telefono in contactos.items():
+     #   print(f" {nombre}: {telefono}") 
     resultado=eliminar_contacto("Ana Lopez")
 
-    print("\nLISTADO ELIMINADO")
+    """ print("\nLISTADO ELIMINADO")
     for nombre, telefono in contactos.items():
-        print(f" {nombre}: {telefono}")
+        print(f" {nombre}: {telefono}") """
     assert resultado is True
     assert buscar_contacto("Ana Lucia") is None

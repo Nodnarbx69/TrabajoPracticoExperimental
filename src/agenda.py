@@ -29,3 +29,15 @@ def eliminar_contacto(nombre):
         return True
     else:
         return False
+
+def mostrar_contactos():
+        return contactos
+
+def listar_contactos():
+    if not contactos:
+        print("No hay contactos guardados.")
+    else:
+        print("\n--- Lista de contactos ---")
+        for nombre, telefono in contactos.items():
+            print(f"{nombre}: {telefono}")
+            
