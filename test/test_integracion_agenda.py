@@ -1,4 +1,4 @@
-from src.agenda import  agregar_contacto, buscar_contacto
+from src.agenda import  agregar_contacto, buscar_contacto, eliminar_contacto
 
 def test_flujo_agregar_y_buscar_contacto():
     datos = {
@@ -15,11 +15,11 @@ def test_flujo_agregar_y_buscar_contacto():
     for nombre, telefono in datos.items():
         assert buscar_contacto("Juan Perez") == "0982222222"
 
-    """ # Eliminar un contacto
-    resultado = datos.eliminar_contacto("Juan Perez")
+     # Eliminar un contacto
+    resultado = eliminar_contacto("Maria Vega")
     assert resultado is True
 
-    # Verificar que ya no exista
+    """# Verificar que ya no exista
     assert datos.buscar_contacto("Juan Perez") is None
 
     # Los demás contactos siguen existiendo
