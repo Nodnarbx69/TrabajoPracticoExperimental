@@ -1,6 +1,6 @@
 from src.agenda import  agregar_contacto, buscar_contacto, eliminar_contacto, mostrar_contactos
 
-def test_flujo_agregar_y_buscar_contacto():
+def test_integracion_agregar_y_buscar_contacto():
     datos = {
         "Ana Lopez": "0981111111",
         "Juan Perez": "0982222222",
