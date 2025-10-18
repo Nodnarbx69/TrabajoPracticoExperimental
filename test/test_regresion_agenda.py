@@ -13,7 +13,7 @@ def test_regression_agenda():
         agregar_contacto(nombre, telefono)
         agregar_contacto_v1(nombre,telefono)      
         
-    # --- Regresión de búsqueda ---
+    # --- Regresión de búsqueda de contactos ---
     for nombre in datos:
         resultado_antiguo = buscar_contacto_v1(nombre)
         resultado_nuevo = buscar_contacto(nombre)
@@ -22,14 +22,17 @@ def test_regression_agenda():
             f"{resultado_antiguo} a {resultado_nuevo}"
         )
    
-    # --- Regresión de mostrar contactos ---
+    # --- Regresión de mostrar los contactos ---
     contactos_antiguos = {"Ana Lopez": "0981111111", "Juan Perez": "0982222222", "Maria Vega": "0983333333"}
+
+    # --- Listas de contactos antiguos ---
     print("\nLista de contactos antiguos:")
     for nombre, telefono in contactos_antiguos.items():
         print(f"{nombre} → {telefono}")
     
     contactos_nuevos = mostrar_contactos()
 
+    # --- Lista de contactos nuevos ---
     print("\nLista de contactos nuevos:")
     for nombre, telefono in contactos_nuevos.items():
      print(f"{nombre} → {telefono}")
@@ -39,9 +42,9 @@ def test_regression_agenda():
     )
 
 
-   # --- Regresión de eliminación ---
-    eliminar_contacto("Juan Perez")
-    assert buscar_contacto("Juan Perez") is None, "Regresión: eliminación no funciona igual que antes"
+   # --- Regresión de eliminación de contactos ---
+    eliminar_contacto("Maria Vega")
+    assert buscar_contacto("Maria Vega") is None, "Regresión: eliminación no funciona igual que antes"
     print("\nLista de contactos actualizados:")
     for nombre, telefono in contactos_nuevos.items():
         print(f"{nombre} → {telefono}")
